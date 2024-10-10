@@ -54,7 +54,7 @@
     {
       "modifiers": [
         {
-          "condition": "(!use_validators)",
+          "condition": "(use_validators == false)",
           "exclude": [
             "**/[Vv]alidators/**"
           ]
@@ -64,7 +64,7 @@
     {
       "modifiers": [
         {
-          "condition": "(!use_repository)",
+          "condition": "(use_repository == false)",
           "exclude": [
             "**/[Mm]appings/**"
           ]

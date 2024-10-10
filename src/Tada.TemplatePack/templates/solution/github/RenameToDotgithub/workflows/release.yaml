@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Build and Test
-        uses: ./.github/actions/build.yaml
+        uses: ./.github/actions/build
 
       - uses: actions/checkout@v3
       - name: Set Version Variable
@@ -24,7 +24,7 @@ jobs:
         run: echo "VERSION=${TAG#v}" >> $GITHUB_ENV
 
       - name: Build and Test
-        uses: ./.github/actions/pack.yaml
+        uses: ./.github/actions/pack
         with:
           version: $VERSION
 

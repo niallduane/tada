@@ -12,6 +12,7 @@
       // If you have changed target frameworks, make sure to update the program path.
       "program": "${workspaceFolder}/src/4.Presentation/TadaSourceName.Presentation.Api/bin/Debug/net8.0/TadaSourceName.Presentation.Api.dll",
       "args": [],
+      "cwd": "${workspaceFolder}/src/4.Presentation/TadaSourceName.Presentation.Api",
       "stopAtEntry": false,
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
       "serverReadyAction": {
@@ -37,6 +38,7 @@
       // If you have changed target frameworks, make sure to update the program path.
       "program": "${workspaceFolder}/src/4.Presentation/TadaSourceName.Presentation.Api/bin/Debug/net8.0/TadaSourceName.Presentation.Api.dll",
       "args": [],
+      "cwd": "${workspaceFolder}/src/4.Presentation/TadaSourceName.Presentation.Api",
       "stopAtEntry": false,
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development"

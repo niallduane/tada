@@ -11,12 +11,12 @@ public class TadaTemplateNameRepositoryTests
 {
     private readonly InMemoryDatabaseContext _dbContext = new();
     private readonly TadaTemplateNameRepository? _repository;
-    private readonly TadaTemplateNameFactory _tadaTemplateNameFactory;
+    private readonly TadaTemplateNameFactory _tadatemplatenameFactory;
 
     public TadaTemplateNameRepositoryTests()
     {
         _repository = new TadaTemplateNameRepository(_dbContext);
-        _tadaTemplateNameFactory = new TadaTemplateNameFactory();
+        _tadatemplatenameFactory = new TadaTemplateNameFactory();
     }
 
     [Fact]
@@ -47,7 +47,7 @@ public class TadaTemplateNameRepositoryTests
     [Fact]
     public async Task Create_Success()
     {
-        var request = _tadaTemplateNameFactory.Generate();
+        var request = _tadatemplatenameFactory.Generate();
         var result = await _repository!.Create(request);
 
         Assert.NotNull(result);

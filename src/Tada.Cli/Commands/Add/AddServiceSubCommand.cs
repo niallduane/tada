@@ -52,11 +52,14 @@ public class AddServiceSubCommand : Command
 
             AddEntitySubCommand.UpdateContent(name, ns);
         }
-        if (!excludeRepository) 
+        var repositoryExists = FileUpdater.FileExists($"src/2.Infrastructure/Database/{ns}.Infrastructure.Database.Repositories/{name}/{name}Repository.cs");
+        if (!excludeRepository)
         {
-
-            shell.Execute("dotnet", $"new tada-database-repository -n {name} --nameSpace {ns} -o \"./src/2.Infrastructure/Database/\"");
-            AddRepositorySubCommand.UpdateContent(name, ns);
+            if (!repositoryExists) 
+            {
+                shell.Execute("dotnet", $"new tada-database-repository -n {name} --nameSpace {ns} -o \"./src/2.Infrastructure/Database/\"");
+                AddRepositorySubCommand.UpdateContent(name, ns);
+            }
         }
         if (!excludeController)
         {

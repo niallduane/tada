@@ -86,7 +86,9 @@ public class PatchRequestConverter<T> : JsonConverter<PatchRequest<T>> where T :
             case JsonTokenType.False:
                 return false;
             case JsonTokenType.Null:
+#pragma warning disable CS8603 // Possible null reference return.
                 return null;
+#pragma warning restore CS8603 //
             case JsonTokenType.StartArray:
                 var list = new List<object>();
                 while (reader.Read())
